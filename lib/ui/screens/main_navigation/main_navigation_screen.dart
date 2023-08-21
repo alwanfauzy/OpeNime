@@ -24,13 +24,13 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         builder: (context) {
           switch (index) {
             case 0:
-              return HomeScreen();
+              return const HomeScreen();
             case 1:
-              return SearchScreen();
+              return const SearchScreen();
             case 2:
-              return WatchListScreen();
+              return const WatchListScreen();
             default:
-              return HomeScreen();
+              return const HomeScreen();
           }
         },
       ),
