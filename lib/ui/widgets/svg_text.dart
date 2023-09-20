@@ -21,14 +21,12 @@ class SvgText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        ColorFiltered(
+        SvgPicture.asset(
+          assetPath,
+          width: size,
           colorFilter: ColorFilter.mode(
             color,
             BlendMode.srcIn,
-          ),
-          child: SvgPicture.asset(
-            assetPath,
-            width: size,
           ),
         ),
         SizedBox(width: spacing),

@@ -32,13 +32,11 @@ class MySearchBar extends StatelessWidget {
                 ),
               ),
             ),
-            ColorFiltered(
+            SvgPicture.asset(
+              'assets/icons/search.svg',
               colorFilter: const ColorFilter.mode(
                 Color(0xff67686D),
                 BlendMode.srcIn,
-              ),
-              child: SvgPicture.asset(
-                'assets/icons/search.svg',
               ),
             ),
           ],
