@@ -2,18 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:openime/ui/widgets/svg_text.dart';
 
 class SearchItem extends StatelessWidget {
-  const SearchItem({super.key});
+  final VoidCallback? onClicked;
+
+  const SearchItem({super.key, this.onClicked});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _image(context),
-          _info(context),
-        ],
+    return InkWell(
+      onTap: onClicked,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _image(context),
+            _info(context),
+          ],
+        ),
       ),
     );
   }
